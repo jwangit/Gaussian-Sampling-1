@@ -5,8 +5,12 @@
  * Created on April 24, 2015, 3:51 PM
  */
 
+#include <NTL/mat_ZZ.h>
+#include <NTL/ZZX.h>
+#include <NTL/ZZ.h>
+#include <NTL/mat_RR.h>
+#include <NTL/vec_RR.h>
 #include <NTL/RR.h>
-
 #ifndef SAMPLERS_H
 #define	SAMPLERS_H
 

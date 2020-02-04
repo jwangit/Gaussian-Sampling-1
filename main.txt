@@ -9,8 +9,6 @@
 #include <NTL/RR.h>
 #include "Samplers.h"
 
-using namespace NTL;
-using namespace std;
 typedef unsigned long long timestamp_t;
 
 static timestamp_t get_timestamp() {
@@ -21,7 +19,7 @@ static timestamp_t get_timestamp() {
 
 int main(void) {
         
-    RR sigmaRR = to_RR(256); // Standard deviation
+    RR sigmaRR = to_RR(3.195); // Standard deviation
     RR c = to_RR(0); // Center of the distribution            
     int security_level;
     float tailcut;
@@ -42,7 +40,7 @@ int main(void) {
         }
         case 2: {
             security_level = 128;
-            tailcut = 8;
+            tailcut = 9.2;
             break;
         }
         case 3: {
@@ -98,7 +96,7 @@ int main(void) {
     }//end-for
 
     cout << "\n[!] Ziggurat average running time for " << nIterations << " iterations: " << (float)(averageZiggurat/((float)(nIterations)*1000000000.0)) << endl;
-    cout << "[!] Knuth-Yao average running time for " << nIterations << " iterations: " << (double)(((float)(nIterations*nSamples)*1000000000.0)/averageKnuthYao) << endl;
+    cout << "[!] Knuth-Yao average running time for " << nIterations << " iterations: " << (float)(averageKnuthYao/((float)(nIterations)*1000000000.0)) << endl;
 
     delete(samplers);
     

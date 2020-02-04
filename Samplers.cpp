@@ -11,6 +11,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+
 using namespace NTL;
 using namespace std;
 
@@ -332,7 +333,7 @@ RR Samplers::DZRecursion(Vec<RR>& X, Vec<RR>& Y, int m, int tail, RR c, RR sigma
  * with coefficients from the Gaussian distribution */
 Vec<int> Samplers::PolyGeneratorKnuthYao(int dimension, int precision, float tailcut, RR sigma, RR c) {
         
-    cout << "\n[*] Knuth-Yao Gaussian sampling" << endl;
+//    cout << "\n[*] Knuth-Yao Gaussian sampling" << endl;
         
     this->BuildProbabilityMatrix(precision, tailcut, sigma, c);
     
