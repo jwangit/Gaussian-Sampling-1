@@ -1,0 +1,2 @@
+
+jwang@ee-jwang-2:~/Documents/Gaussian-Sampling-1$ g++ -Ofast -g -I /usr/local/include/ -L /usr/local/lib/ main.cpp Samplers.cpp -o test -lntl -lgmp -lm -pthread
